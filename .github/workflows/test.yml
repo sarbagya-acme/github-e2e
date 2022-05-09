@@ -2,7 +2,7 @@ name: Test Lab
 on: push
 jobs:
   test-lab:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout the repo
@@ -31,5 +31,5 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0
 
       - name: Run tests
-        run: ./ios.sh
+        run: ./android.sh
         working-directory: test_runner
